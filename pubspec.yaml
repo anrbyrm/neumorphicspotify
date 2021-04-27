@@ -1,0 +1,38 @@
+name: spotify_neumorphic
+description: Spotify Neumorphism UI Redesign.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  flutter_neumorphic: ^3.1.0
+  font_awesome_flutter: ^9.0.0
+
+dev_dependencies:
+  lint: ^1.5.3
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
+    - assets/images/
+  fonts:
+    - family: helvetica
+      fonts:
+      - asset: assets/fonts/Helvetica-Bold.ttf
+      - asset: assets/fonts/Helvetica-BoldOblique.ttf
+      - asset: assets/fonts/Helvetica-Compressed.otf
+      - asset: assets/fonts/Helvetica-Oblique.ttf
+      - asset: assets/fonts/Helvetica.ttf
+    - family: helvetica-rounded
+      fonts:
+      - asset: assets/fonts/Helvetica-Rounded-Bold.otf
