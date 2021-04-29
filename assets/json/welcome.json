@@ -1,0 +1,28 @@
+{
+  "cards": [
+    {
+      "title": "God Tier",
+      "image": "assets/images/welcome/godtier.jpg"
+    },
+    {
+      "title": "Liked",
+      "image": "assets/images/welcome/liked.png"
+    },
+    {
+      "title": "Уроборос: Зеркала",
+      "image": "assets/images/welcome/scriptonite.jpg"
+    },
+    {
+      "title": "The Weeknd",
+      "image": "assets/images/welcome/theweeknd.jpg"
+    },
+    {
+      "title": "Dark & Stormy",
+      "image": "assets/images/welcome/dark.jpg"
+    },
+    {
+      "title": "Discover Weekly",
+      "image": "assets/images/welcome/discover.jpg"
+    }
+  ]
+}

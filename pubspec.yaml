@@ -25,6 +25,10 @@ flutter:
   assets:
     - assets/
     - assets/images/
+    - assets/images/welcome/
+    - assets/images/recently_played/
+    - assets/json/
+
   fonts:
     - family: helvetica
       fonts:
