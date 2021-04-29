@@ -1,6 +1,11 @@
 {
   "recently_played": [
     {
+      "name": "Living Life, In The Night",
+      "artist": "Cheriimoya, Sierra Kidd",
+      "image": "assets/images/recently_played/cheriimoya.jpg"
+    },
+    {
       "name": "Disco",
       "artist": "No.1",
       "image": "assets/images/recently_played/no1.jpg"
