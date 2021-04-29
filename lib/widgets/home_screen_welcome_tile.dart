@@ -17,7 +17,7 @@ class WelcomeTile extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.only(
         right: (index % 2 == 0) ? 0.0 : 10.0,
-        left: 10.0,
+        left: 15.0,
         bottom: 5.0,
       ),
       child: Neumorphic(

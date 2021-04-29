@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
+
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
-class RecentlyPlayedListTile extends StatelessWidget {
+class PlaylistsFlowListTile extends StatelessWidget {
   final String name;
   final String artist;
   final String imagePath;
   final int index;
   final int last;
 
-  const RecentlyPlayedListTile({
+  PlaylistsFlowListTile({
     @required this.name,
     @required this.artist,
     @required this.imagePath,
@@ -23,6 +24,7 @@ class RecentlyPlayedListTile extends StatelessWidget {
           left: index == 0 ? 15.0 : 20.0, right: index == last ? 15.0 : 0.0),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
             height: 150,
@@ -31,12 +33,13 @@ class RecentlyPlayedListTile extends StatelessWidget {
               style: NeumorphicStyle(
                 color: Theme.of(context).scaffoldBackgroundColor,
                 shape: NeumorphicShape.concave,
-                boxShape: NeumorphicBoxShape.circle(),
-                depth: 7,
+                boxShape:
+                    NeumorphicBoxShape.roundRect(BorderRadius.circular(10.0)),
+                depth: 4,
                 surfaceIntensity: .1,
                 intensity: .4,
                 shadowDarkColor: Colors.black,
-                shadowLightColor: Colors.white,
+                shadowLightColor: Colors.white.withOpacity(.8),
                 lightSource: LightSource.topLeft,
               ),
               child: Padding(
@@ -45,15 +48,17 @@ class RecentlyPlayedListTile extends StatelessWidget {
                   style: NeumorphicStyle(
                     color: Theme.of(context).scaffoldBackgroundColor,
                     shape: NeumorphicShape.concave,
-                    boxShape: NeumorphicBoxShape.circle(),
+                    boxShape: NeumorphicBoxShape.roundRect(
+                        BorderRadius.circular(10.0)),
                     depth: 6,
                     intensity: .1,
                     lightSource: LightSource.top,
                   ),
                   child: Container(
                     decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      image: DecorationImage(image: AssetImage(imagePath)),
+                      image: DecorationImage(
+                        image: AssetImage(imagePath),
+                      ),
                     ),
                   ),
                 ),
@@ -61,18 +66,26 @@ class RecentlyPlayedListTile extends StatelessWidget {
             ),
           ),
           SizedBox(height: 10),
-          Text(
-            artist,
-            style: TextStyle(
-                color: Colors.white, fontWeight: FontWeight.bold, fontSize: 15),
-          ),
-          SizedBox(height: 5),
-          Text(
-            name,
-            style: TextStyle(
-                color: Colors.white.withOpacity(.4),
-                fontWeight: FontWeight.normal,
-                fontSize: 12),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Text(
+                name,
+                style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 15),
+              ),
+              SizedBox(height: 5),
+              Text(
+                'by $artist',
+                style: TextStyle(
+                    color: Colors.white.withOpacity(.4),
+                    fontWeight: FontWeight.normal,
+                    fontSize: 12),
+              ),
+            ],
           ),
         ],
       ),
