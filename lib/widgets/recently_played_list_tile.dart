@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
 class RecentlyPlayedListTile extends StatelessWidget {
-  final String name;
-  final String artist;
-  final String imagePath;
-  final int index;
-  final int last;
+  final String? name;
+  final String? artist;
+  final String? imagePath;
+  final int? index;
+  final int? last;
 
   const RecentlyPlayedListTile({
     @required this.name,
@@ -53,7 +53,7 @@ class RecentlyPlayedListTile extends StatelessWidget {
                   child: Container(
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
-                      image: DecorationImage(image: AssetImage(imagePath)),
+                      image: DecorationImage(image: AssetImage(imagePath!)),
                     ),
                   ),
                 ),
@@ -62,13 +62,13 @@ class RecentlyPlayedListTile extends StatelessWidget {
           ),
           SizedBox(height: 10),
           Text(
-            artist,
+            name!,
             style: TextStyle(
                 color: Colors.white, fontWeight: FontWeight.bold, fontSize: 15),
           ),
           SizedBox(height: 5),
           Text(
-            name,
+            artist!,
             style: TextStyle(
                 color: Colors.white.withOpacity(.4),
                 fontWeight: FontWeight.normal,

@@ -1,11 +1,11 @@
-class Welcome {
-  String title;
-  String imagePath;
+class WelcomeModel {
+  String? title;
+  String? imagePath;
 
-  Welcome({this.title, this.imagePath});
+  WelcomeModel({this.title, this.imagePath});
 
-  factory Welcome.fromJson(Map<String, dynamic> json) {
-    return Welcome(
+  factory WelcomeModel.fromJson(Map<String, dynamic> json) {
+    return WelcomeModel(
       title: json["title"] as String,
       imagePath: json["image"] as String,
     );

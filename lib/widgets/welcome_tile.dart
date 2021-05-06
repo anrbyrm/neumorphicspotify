@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
 class WelcomeTile extends StatelessWidget {
-  final String title;
-  final String imagePath;
-  final int index;
+  final String? title;
+  final String? imagePath;
+  final int? index;
 
   const WelcomeTile({
     @required this.title,
@@ -16,7 +16,7 @@ class WelcomeTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(
-        right: (index % 2 == 0) ? 0.0 : 10.0,
+        right: (index! % 2 == 0) ? 0.0 : 10.0,
         left: 15.0,
         bottom: 5.0,
       ),
@@ -37,12 +37,12 @@ class WelcomeTile extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Container(
-              child: Image.asset(imagePath),
+              child: Image.asset(imagePath!),
             ),
             Padding(
               padding: const EdgeInsets.only(left: 10.0),
               child: Text(
-                title,
+                title!,
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 11,

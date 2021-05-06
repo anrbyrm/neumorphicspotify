@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
 class PlaylistsFlowListTile extends StatelessWidget {
-  final String name;
-  final String artist;
-  final String imagePath;
-  final int index;
-  final int last;
+  final int? last;
+  final int? index;
+  final String? name;
+  final String? artist;
+  final String? imagePath;
 
   PlaylistsFlowListTile({
     @required this.name,
@@ -57,7 +57,7 @@ class PlaylistsFlowListTile extends StatelessWidget {
                   child: Container(
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage(imagePath),
+                        image: AssetImage(imagePath!),
                       ),
                     ),
                   ),
@@ -71,7 +71,7 @@ class PlaylistsFlowListTile extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Text(
-                name,
+                name!,
                 style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,

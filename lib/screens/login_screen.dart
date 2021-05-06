@@ -5,8 +5,6 @@ import 'package:spotify_neumorphic/theme.dart';
 import 'package:spotify_neumorphic/widgets/login_button_style.dart';
 
 class LoginScreen extends StatefulWidget {
-  LoginScreen({Key key}) : super(key: key);
-
   @override
   _LoginScreenState createState() => _LoginScreenState();
 }

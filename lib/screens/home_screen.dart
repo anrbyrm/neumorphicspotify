@@ -3,21 +3,20 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 import 'package:spotify_neumorphic/models/models.dart';
 import 'package:spotify_neumorphic/widgets/widgets.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key key}) : super(key: key);
-
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  List<Welcome> _firstCards = [];
-  List<Song> _recentCards = [];
-  List<Song> _playlistsFlow = [];
+  List<SongModel> _recentCards = [];
+  List<WelcomeModel> _firstCards = [];
+  List<SongModel> _playlistsFlow = [];
 
   @override
   void initState() {
@@ -43,8 +42,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   bottom: 5,
                 ),
                 child: Container(
-                  height: 50,
-                  width: 50,
+                  height: 40,
+                  width: 40,
                   child: Neumorphic(
                     style: NeumorphicStyle(
                         depth: 4,
@@ -68,7 +67,17 @@ class _HomeScreenState extends State<HomeScreen> {
                             padding: const EdgeInsets.only(right: .05),
                             duration: const Duration(milliseconds: 100),
                             curve: Curves.easeIn,
-                            onPressed: (() {}),
+                            onPressed: (() {
+                              Fluttertoast.showToast(
+                                msg: 'Settings icon is clicked.',
+                                toastLength: Toast.LENGTH_SHORT,
+                                gravity: ToastGravity.BOTTOM,
+                                textColor: Colors.white,
+                                backgroundColor:
+                                    Colors.grey[700]?.withOpacity(.7),
+                                fontSize: 13.0,
+                              );
+                            }),
                             style: NeumorphicStyle(
                                 depth: 6,
                                 intensity: .2,
@@ -80,6 +89,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     Theme.of(context).scaffoldBackgroundColor),
                             child: Icon(
                               Icons.settings_outlined,
+                              size: 20,
                               color: Colors.white.withOpacity(.5),
                             ),
                           ),
@@ -99,11 +109,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   padding: EdgeInsets.only(left: leftPadding),
                   child: Text(
                     'Good Morning',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style: Theme.of(context).textTheme.headline2,
                   ),
                 ),
                 GridView.builder(
@@ -136,11 +142,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   padding: EdgeInsets.only(left: leftPadding),
                   child: Text(
                     'Recently Played',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style: Theme.of(context).textTheme.headline2,
                   ),
                 ),
                 SizedBox(height: 10),
@@ -173,11 +175,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   padding: EdgeInsets.only(left: leftPadding),
                   child: Text(
                     'Playlists Flow',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style: Theme.of(context).textTheme.headline2,
                   ),
                 ),
                 Container(
@@ -217,12 +215,14 @@ class _HomeScreenState extends State<HomeScreen> {
     final welcomeData = welcomeResponse['cards'] as List;
     final recentsData = recentsResponse['recently_played'] as List;
     final playlistsData = playlistsResponse['playlists_flow'] as List;
-    final firstCards =
-        welcomeData.map<Welcome>((json) => Welcome.fromJson(json)).toList();
+    final firstCards = welcomeData
+        .map<WelcomeModel>((json) => WelcomeModel.fromJson(json))
+        .toList();
     final recentsCards =
-        recentsData.map<Song>((json) => Song.fromJson(json)).toList();
-    final playlistsCards =
-        playlistsData.map<Song>((json) => Song.fromJson(json)).toList();
+        recentsData.map<SongModel>((json) => SongModel.fromJson(json)).toList();
+    final playlistsCards = playlistsData
+        .map<SongModel>((json) => SongModel.fromJson(json))
+        .toList();
     setState(() {
       _firstCards = firstCards;
       _recentCards = recentsCards;
