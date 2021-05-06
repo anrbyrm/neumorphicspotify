@@ -1,0 +1,39 @@
+{
+  "recently_played": [
+    {
+      "name": "Living Life, In The Night",
+      "artist": "Cheriimoya, Sierra Kidd",
+      "image": "assets/images/recently_played/cheriimoya.jpg"
+    },
+    {
+      "name": "Disco",
+      "artist": "No.1",
+      "image": "assets/images/recently_played/no1.jpg"
+    },
+    {
+      "name": "Меня не будет",
+      "artist": "ANIKV, SALUKI",
+      "image": "assets/images/recently_played/anikv.jpg"
+    },
+    {
+      "name": "Hayat Garip",
+      "artist": "Ozbi, Gülce Duru",
+      "image": "assets/images/recently_played/ozbi.jpg"
+    },
+    {
+      "name": "Düşünme Kaybolursun",
+      "artist": "No Land",
+      "image": "assets/images/recently_played/noland.jpg"
+    },
+    {
+      "name": "Valse",
+      "artist": "Evgeny Grinko",
+      "image": "assets/images/recently_played/evgeny.jpg"
+    },
+    {
+      "name": "Судно",
+      "artist": "Молчат Дома",
+      "image": "assets/images/recently_played/molchat.jpg"
+    }
+  ]
+}

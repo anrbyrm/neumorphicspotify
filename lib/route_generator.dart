@@ -5,6 +5,8 @@ import 'package:spotify_neumorphic/screens/screens.dart';
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
+      case '/navigation':
+        return MaterialPageRoute(builder: (_) => NavigationScreen());
       case '/login':
         return MaterialPageRoute(builder: (_) => LoginScreen());
       case '/home':

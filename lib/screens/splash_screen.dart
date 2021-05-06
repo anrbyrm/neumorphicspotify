@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SplashScreen extends StatefulWidget {
-  SplashScreen({Key key}) : super(key: key);
-
   final greenColor = Color(0xFF1DB854);
 
   @override
@@ -54,9 +52,9 @@ class _SplashScreenState extends State<SplashScreen> {
                           begin: Alignment.topLeft,
                           end: Alignment.bottomLeft,
                           colors: [
-                            Color.lerp(widget.greenColor, Colors.black, .1),
-                            Color.lerp(widget.greenColor, Colors.black, .09),
-                            Color.lerp(widget.greenColor, Colors.black, .05),
+                            Color.lerp(widget.greenColor, Colors.black, .1)!,
+                            Color.lerp(widget.greenColor, Colors.black, .09)!,
+                            Color.lerp(widget.greenColor, Colors.black, .05)!,
                           ],
                           stops: [
                             0.0,

@@ -1,3 +1,3 @@
-# spotify_neumorphic
+# Spotify Neumorphic
 
 Spotify Neumorphism UI Redesign.

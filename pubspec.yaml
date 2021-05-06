@@ -6,25 +6,29 @@ publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
+  lint: ^1.5.3
+  fluttertoast: ^8.0.6
   cupertino_icons: ^1.0.2
+  palette_generator: ^0.3.0
   flutter_neumorphic: ^3.1.0
   font_awesome_flutter: ^9.0.0
-
-dev_dependencies:
-  lint: ^1.5.3
-  flutter_test:
-    sdk: flutter
 
 flutter:
   uses-material-design: true
   assets:
     - assets/
     - assets/images/
+    - assets/images/genres/
+    - assets/images/welcome/
+    - assets/images/recently_played/
+    - assets/images/playlists_flow/
+    - assets/json/
+
   fonts:
     - family: helvetica
       fonts:
