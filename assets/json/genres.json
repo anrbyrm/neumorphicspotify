@@ -1,8 +1,80 @@
 {
-    "genres": [
+    "top": [
       {
-        "title": "Pop",
-        "image": "assets/images/genres/popmix.jpg"
+        "title": "Wellness",
+        "image": "assets/images/genres/stressrelief.jpg",
+        "color": "#216F8C"
+      },{
+        "title": "Chill",
+        "image": "assets/images/genres/lofi.jpg",
+        "color": "#87A0B3"
+      },{
+        "title": "Sleep",
+        "image": "assets/images/genres/sleep.jpg",
+        "color": "#39587F"
+      },{
+        "title": "R&B",
+        "image": "assets/images/genres/areandbe.jpg",
+        "color": "#D86dC6"
+      }
+    ],
+    "all": [
+      {
+        "title": "Made For You",
+        "image": "assets/images/genres/popmix.jpg",
+        "color": "#98D3B6"
+      },{
+        "title": "Focus",
+        "image": "assets/images/genres/deepfocus.jpg",
+        "color": "#241F35"
+      },{
+        "title": "Decades",
+        "image": "assets/images/genres/allout.jpg",
+        "color": "#104B38"
+      },{
+        "title": "Hip Hop",
+        "image": "assets/images/genres/rapcaviar.png",
+        "color": "#FCA400"
+      },{
+        "title": "Chill",
+        "image": "assets/images/genres/lofi.jpg",
+        "color": "#87A0B3"
+      },{
+        "title": "R&B",
+        "image": "assets/images/genres/areandbe.jpg",
+        "color": "#D86dC6"
+      },{
+        "title": "Wellness",
+        "image": "assets/images/genres/stressrelief.jpg",
+        "color": "#216F8C"
+      },{
+        "title": "Classical",
+        "image": "assets/images/genres/classical.jpg",
+        "color": "#362D33"
+      },{
+        "title": "Sleep",
+        "image": "assets/images/genres/sleep.jpg",
+        "color": "#39587F"
+      },{
+        "title": "Soul",
+        "image": "assets/images/genres/soul.jpg",
+        "color": "#131635"
+      },{
+        "title": "Funk",
+        "image": "assets/images/genres/funk.jpg",
+        "color": "#19422F"
+      },{
+        "title": "Mood",
+        "image": "assets/images/genres/mood.jpg",
+        "color": "#8E5995"
+      },{
+        "title": "Gaming",
+        "image": "assets/images/genres/gaming.jpg",
+        "color": "#035E68"
+      },{
+        "title": "Instrumental",
+        "image": "assets/images/genres/instrumental.jpg",
+        "color": "#606F70"
       }
     ]
   }
