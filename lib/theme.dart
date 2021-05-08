@@ -34,7 +34,7 @@ class CustomTextTheme {
     return Theme.of(context).textTheme.bodyText1!.copyWith(
           fontSize: 14.0,
           fontWeight: FontWeight.bold,
-          color: Colors.grey,
+          color: Colors.white60,
         );
   }
 }

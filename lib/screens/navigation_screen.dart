@@ -82,7 +82,7 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
             for (var i = 0; i < widget.iconList!.length; i++)
               widget.activeIndex == i
                   ? CustomNavigationButtonPressed(
-                      color: Color(0xFF1DB854),
+                      color: Color(0xFF1DB854).withGreen(500),
                       activeIcon: widget.activeIconList![i],
                     )
                   : CustomNavigationButton(

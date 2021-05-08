@@ -7,7 +7,7 @@ analyzer:
   errors:
     unused_element: ignore
     missing_return: error
-    must_be_immutable: error
+    must_be_immutable: ignore
     missing_required_param: error
     non_constant_identifier_names: ignore
     sort_unnamed_constructors_first: ignore
