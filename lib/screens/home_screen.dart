@@ -2,13 +2,8 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-<<<<<<< HEAD
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
-=======
-import 'package:flutter_neumorphic/flutter_neumorphic.dart';
-import 'package:fluttertoast/fluttertoast.dart';
->>>>>>> 4097f0708b6e4f8d2dda8262f51c8e90afd55f05
 
 import 'package:spotify_neumorphic/models/models.dart';
 import 'package:spotify_neumorphic/widgets/widgets.dart';

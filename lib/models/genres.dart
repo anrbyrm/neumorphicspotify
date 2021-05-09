@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 class GenresModel {
   String? color;
   String? title;
@@ -14,6 +13,3 @@ class GenresModel {
     );
   }
 }
-=======
-class GenresModel {}
->>>>>>> 4097f0708b6e4f8d2dda8262f51c8e90afd55f05

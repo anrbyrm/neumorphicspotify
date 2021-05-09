@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
 import 'package:flutter/services.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
@@ -111,30 +110,13 @@ class __buttonStyleState extends State<_buttonStyle> {
                       : Colors.white.withOpacity(.7),
                   fontWeight: FontWeight.bold),
             ),
-=======
-
-class LibraryScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Text(
-          'Library',
-          style: TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-            fontSize: 20.0,
->>>>>>> 4097f0708b6e4f8d2dda8262f51c8e90afd55f05
           ),
         ),
       ),
     );
   }
-<<<<<<< HEAD
 
   bool isActive() {
     return widget.activeIndex == widget.index ? true : false;
   }
-=======
->>>>>>> 4097f0708b6e4f8d2dda8262f51c8e90afd55f05
 }
