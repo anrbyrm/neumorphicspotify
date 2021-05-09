@@ -6,7 +6,7 @@ import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
 import 'package:spotify_neumorphic/theme.dart';
 import 'package:spotify_neumorphic/models/genres.dart';
-import 'package:spotify_neumorphic/widgets/widgets.dart';
+import 'package:spotify_neumorphic/widgets/genres_list_tile.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen();
