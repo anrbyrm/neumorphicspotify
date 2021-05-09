@@ -16,21 +16,18 @@ class _NavigationScreenState extends State<NavigationScreen> {
     HomeScreen(),
     SearchScreen(),
     LibraryScreen(),
-    ProfileScreen(),
   ]);
 
   final iconList = List<IconData>.unmodifiable([
     Icons.home_outlined,
     Icons.search_outlined,
     Icons.album_outlined,
-    FontAwesomeIcons.spotify,
   ]);
 
   final activeIconList = List<IconData>.unmodifiable([
     Icons.home,
     Icons.search,
     Icons.album,
-    FontAwesomeIcons.spotify,
   ]);
 
   @override
