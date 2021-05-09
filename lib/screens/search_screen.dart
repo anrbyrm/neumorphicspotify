@@ -21,13 +21,13 @@ class _SearchScreenState extends State<SearchScreen> {
   double? imageSize;
   Color? textColor;
 
-  final leftPadding = 15.0;
+  final double leftPadding = 15.0;
   List<GenresModel>? __allGenres;
   List<GenresModel>? __genresList;
 
   @override
   Widget build(BuildContext context) {
-    final color = Theme.of(context).scaffoldBackgroundColor;
+    final bgColor = Theme.of(context).scaffoldBackgroundColor;
     return Scaffold(
       body: GestureDetector(
         onTap: () => FocusScope.of(context).requestFocus(FocusNode()),
@@ -50,7 +50,7 @@ class _SearchScreenState extends State<SearchScreen> {
                 child: Neumorphic(
                   style: NeumorphicStyle(
                     shape: NeumorphicShape.flat,
-                    color: color,
+                    color: bgColor,
                     depth: 4,
                     intensity: .3,
                     shadowDarkColor: Colors.black,
@@ -66,9 +66,9 @@ class _SearchScreenState extends State<SearchScreen> {
                         border: NeumorphicBorder(
                           isEnabled: true,
                           width: 4,
-                          color: color,
+                          color: bgColor,
                         ),
-                        color: color,
+                        color: bgColor,
                       ),
                       child: Padding(
                         padding: const EdgeInsets.only(left: 10.0),
@@ -215,7 +215,8 @@ class _SearchScreenState extends State<SearchScreen> {
 
   Future<String> _getGenres() async {
     final genresJson = await rootBundle.loadString('assets/json/genres.json');
-    return genresJson;
+
+    return Future.delayed(const Duration(milliseconds: 1000), () => genresJson);
   }
 
   Widget _listenerWidget(int index, child) {
