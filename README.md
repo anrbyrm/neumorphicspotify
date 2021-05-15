@@ -30,7 +30,7 @@
 ## About The Project
 
 <a href="https://raw.githubusercontent.com/anrbyrm/neumorphicspotify/main/assets/images/login.jpg">
-    <img src="assets/images/splash.jpg" alt="Login Screen" width="200">
+    <img src="assets/images/login.jpg" alt="Login Screen" width="200">
 </a>
 <a href="https://raw.githubusercontent.com/anrbyrm/neumorphicspotify/main/assets/images/menu_1.jpg">
     <img src="assets/images/menu_1.jpg" alt="Main Screen" width="200">
