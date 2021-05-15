@@ -1,0 +1,254 @@
+{
+    "library": [
+      {
+        "title": "Liked Songs",
+        "image": "assets/images/welcome/liked.png",
+        "count": 5,
+        "author": "",
+        "type": 0,
+        "songs": [
+          {
+            "title": "Равнодушие",
+            "author": "Malbec, Siuzanna",
+            "imagePath": "assets/images/songs/malbec.jpg"
+          },{
+            "title": "6.18.18",
+            "author": "Bil Cutie",
+            "imagePath": "assets/images/songs/billie.jpg"
+          },{
+            "title": "Nightcore Let Me Die",
+            "author": "Nightmare",
+            "imagePath": "assets/images/songs/nightmare.jpg"
+          },{
+            "title": "Это любовь",
+            "author": "Scriptonite",
+            "imagePath": "assets/images/songs/scriptonite.jpg"
+          },{
+            "title": "Положение",
+            "author": "Scriptonite",
+            "imagePath": "assets/images/songs/scriptonite_2.jpg"
+          },{
+            "title": "Вечеринка",
+            "author": "Scriptonite",
+            "imagePath": "assets/images/songs/scriptonite.jpg"
+          }
+        ]
+      },{
+        "title": "God Tier",
+        "image": "assets/images/welcome/godtier.jpg",
+        "count": 0,
+        "author": "anrbyrm",
+        "type": 0,
+        "songs": [
+          {
+            "title": "Düşünme Kaybolursun",
+            "author": "No Land",
+            "imagePath": "assets/images/songs/noland.jpg"
+          },{
+            "title": "Valse",
+            "author": "Evgeny Grinko",
+            "imagePath": "assets/images/recently_played/evgeny.jpg"
+          },{
+            "title": "Star Shopping",
+            "author": "Lil Peep",
+            "imagePath": "assets/images/songs/peep.jpg"
+          },{
+            "title": "Hayat Garip",
+            "author": "Ozbi, Gülce Duru",
+            "imagePath": "assets/images/recently_played/ozbi.jpg"
+          },{
+            "title": "Sleeping Inside",
+            "author": "Lilium",
+            "imagePath": "assets/images/songs/lilium.jpg"
+          },{
+            "title": "Ocean Drive",
+            "author": "Duke Dumont",
+            "imagePath": "assets/images/songs/ocean_drive.jpg"
+          },{
+            "title": "Cascade",
+            "author": "Turkish Delight",
+            "imagePath": "assets/images/songs/cascade.jpg"
+          },{
+            "title": "Меня не будет",
+            "author": "ANIKV, SALUKI",
+            "imagePath": "assets/images/recently_played/anikv.jpg"
+          },{
+            "title": "Вчера ночью",
+            "author": "Scriptonite",
+            "imagePath": "assets/images/welcome/scriptonite.jpg"
+          }
+        ]
+      },{
+        "title": "Rakılı Live, 2. Seri",
+        "image": "assets/images/library/rakili.jpg",
+        "count": 0,
+        "author": "Ozbi",
+        "type": 1,
+        "songs": [
+          {
+            "title": "Façalı Yürekler",
+            "author": "Ozbi, Gülce Duru",
+            "imagePath": "assets/images/library/rakili.jpg"
+          },{
+            "title": "Hayat Garip",
+            "author": "Ozbi, Gülce Duru",
+            "imagePath": "assets/images/library/rakili.jpg"
+          },{
+            "title": "Bu Nasıl Sevda?",
+            "author": "Ozbi, Gülce Duru",
+            "imagePath": "assets/images/library/rakili.jpg"
+          },{
+            "title": "Adımı Geri Ver",
+            "author": "Ozbi, Gülce Duru",
+            "imagePath": "assets/images/library/rakili.jpg"
+          },{
+            "title": "Hülya",
+            "author": "Ozbi, Gülce Duru",
+            "imagePath": "assets/images/library/rakili.jpg"
+          },{
+            "title": "Kahıra Eyvallah",
+            "author": "Ozbi, Gülce Duru",
+            "imagePath": "assets/images/library/rakili.jpg"
+          }
+        ]
+      },{
+        "title": "The Eminem Show",
+        "image": "assets/images/library/theeminemshow.jpg",
+        "count": 0,
+        "author": "Eminem",
+        "type": 1,
+        "songs": [
+          {
+            "title": "Curtains Up - Skit",
+            "author": "Eminem",
+            "imagePath": "assets/images/library/theeminemshow.jpg"
+          },{
+            "title": "White America",
+            "author": "Eminem",
+            "imagePath": "assets/images/library/theeminemshow.jpg"
+          },{
+            "title": "Business",
+            "author": "Eminem",
+            "imagePath": "assets/images/library/theeminemshow.jpg"
+          },{
+            "title": "Cleanin' Out My Closet",
+            "author": "Eminem",
+            "imagePath": "assets/images/library/theeminemshow.jpg"
+          },{
+            "title": "Square Dance",
+            "author": "Eminem",
+            "imagePath": "assets/images/library/theeminemshow.jpg"
+          },{
+            "title": "The Kiss - Skit",
+            "author": "Eminem",
+            "imagePath": "assets/images/library/theeminemshow.jpg"
+          },{
+            "title": "Soldier",
+            "author": "Eminem",
+            "imagePath": "assets/images/library/theeminemshow.jpg"
+          },{
+            "title": "Say Goodbye Hollywood",
+            "author": "Eminem",
+            "imagePath": "assets/images/library/theeminemshow.jpg"
+          },{
+            "title": "Drips",
+            "author": "Eminem",
+            "imagePath": "assets/images/library/theeminemshow.jpg"
+          },{
+            "title": "Without Me",
+            "author": "Eminem",
+            "imagePath": "assets/images/library/theeminemshow.jpg"
+          },{
+            "title": "Paul Rosenberg - Skit",
+            "author": "Eminem",
+            "imagePath": "assets/images/library/theeminemshow.jpg"
+          },{
+            "title": "Sing For The Moment",
+            "author": "Eminem",
+            "imagePath": "assets/images/library/theeminemshow.jpg"
+          },{
+            "title": "Superman",
+            "author": "Eminem",
+            "imagePath": "assets/images/library/theeminemshow.jpg"
+          },{
+            "title": "Hailie's Song",
+            "author": "Eminem",
+            "imagePath": "assets/images/library/theeminemshow.jpg"
+          },{
+            "title": "Steve Berman - Skit",
+            "author": "Eminem",
+            "imagePath": "assets/images/library/theeminemshow.jpg"
+          },{
+            "title": "When The Music Stops",
+            "author": "Eminem",
+            "imagePath": "assets/images/library/theeminemshow.jpg"
+          },{
+            "title": "Say What You Say",
+            "author": "Eminem",
+            "imagePath": "assets/images/library/theeminemshow.jpg"
+          },{
+            "title": "'Till I Collapse",
+            "author": "Eminem",
+            "imagePath": "assets/images/library/theeminemshow.jpg"
+          },{
+            "title": "My Dad's Gone Crazy",
+            "author": "Eminem",
+            "imagePath": "assets/images/library/theeminemshow.jpg"
+          },{
+            "title": "Curtains Close",
+            "author": "Eminem",
+            "imagePath": "assets/images/library/theeminemshow.jpg"
+          }
+        ]
+      },{
+        "title": "Kan",
+        "image": "assets/images/library/kan.jpg",
+        "count": 0,
+        "author": "Uzi",
+        "type": 1,
+        "songs": [
+          {
+            "title": "Makina",
+            "author": "Uzi",
+            "imagePath": "assets/images/library/kan.jpg"
+          },{
+            "title": "Umrumda Değil",
+            "author": "Uzi",
+            "imagePath": "assets/images/library/kan.jpg"
+          },{
+            "title": "Gecenin İçine Gir",
+            "author": "Uzi",
+            "imagePath": "assets/images/library/kan.jpg"
+          },{
+            "title": "Nedenini Sorma",
+            "author": "Uzi",
+            "imagePath": "assets/images/library/kan.jpg"
+          },{
+            "title": "Mahalle",
+            "author": "Uzi",
+            "imagePath": "assets/images/library/kan.jpg"
+          },{
+            "title": "Krvn",
+            "author": "Uzi",
+            "imagePath": "assets/images/library/kan.jpg"
+          },{
+            "title": "Vur",
+            "author": "Uzi",
+            "imagePath": "assets/images/library/kan.jpg"
+          },{
+            "title": "Davetiye",
+            "author": "Uzi",
+            "imagePath": "assets/images/library/kan.jpg"
+          },{
+            "title": "Elhamdulillah",
+            "author": "Uzi",
+            "imagePath": "assets/images/library/kan.jpg"
+          },{
+            "title": "Outro",
+            "author": "Uzi",
+            "imagePath": "assets/images/library/kan.jpg"
+          }
+        ]
+      }
+    ]
+  }

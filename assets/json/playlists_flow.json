@@ -1,6 +1,11 @@
 {
     "playlists_flow": [
       {
+        "name": "Dreamless",
+        "artist": "anrbyrm",
+        "image": "assets/images/playlists_flow/dreamless.jpg"
+      },
+      {
         "name": "This is Scriptonite",
         "artist": "Spotify",
         "image": "assets/images/playlists_flow/scriptonite.jpg"
@@ -14,16 +19,6 @@
         "name": "Dreamed at Dawn",
         "artist": "The Away Days",
         "image": "assets/images/playlists_flow/theawaydays.jpg"
-      },
-      {
-        "name": "Dreamless",
-        "artist": "anrbyrm",
-        "image": "assets/images/playlists_flow/dreamless.jpg"
-      },
-      {
-        "name": "Kan",
-        "artist": "Uzi",
-        "image": "assets/images/playlists_flow/uzi.jpg"
       },
       {
         "name": "God Tier",
