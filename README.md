@@ -7,7 +7,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/anrbyrm/neumorphicspotify">
-    <img src="assets/images/spotify_white_icon.png" alt="Logo" width="80" height="80">
+    <img src="assets/images/spotify_white_logo.png" alt="Spotify Logo" width="1700">
   </a>
 
   <h3 align="center">Spotify Neumorphic Redesign</h3>
@@ -22,26 +22,24 @@
     <li><a href="#installation">Installation</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#used-dependencies-in-project">Used dependencies in the project</a></li>
+    <li><a href="#used-dependencies-in-the-project">Used dependencies in the project</a></li>
   </ol>
 </details>
-
-
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
 <a href="https://github.com/anrbyrm/neumorphicspotify/blob/assets/images/splash.jpg">
-    <img src="assets/images/splash.jpg" alt="Logo" width="80" height="160">
+    <img src="assets/images/splash.jpg" alt="Splash Screen" width="200">
 </a>
 <a href="https://github.com/anrbyrm/neumorphicspotify/blob/assets/images/menu_1.jpg">
-    <img src="assets/images/menu_1.jpg" alt="Logo" width="80" height="160">
+    <img src="assets/images/menu_1.jpg" alt="Main Screen" width="200">
 </a>
 <a href="https://github.com/anrbyrm/neumorphicspotify/blob/assets/images/menu_2.jpg">
-    <img src="assets/images/menu_2.jpg" alt="Logo" width="80" height="160">
+    <img src="assets/images/menu_2.jpg" alt="Search Screen" width="200">
 </a>
 <a href="https://github.com/anrbyrm/neumorphicspotify/blob/assets/images/menu_3.jpg">
-    <img src="assets/images/menu_3.jpg" alt="Logo" width="80" height="160">
+    <img src="assets/images/menu_3.jpg" alt="Library Screen" width="200">
 </a>
 
 This project created for learning purpose. As I finished some screens according Neumorphic design I wanted to share this project in Github.
@@ -53,8 +51,7 @@ U can navigate in README using table of contents.
 For running this project in your machine, you need Flutter SDK installed on your computer.
 
 For installing Flutter check out official documentation on Flutter.dev.
-* Flutter SDK
-  * [Flutter](https://flutter.dev/docs/get-started/install)
+* [Flutter SDK](https://flutter.dev/docs/get-started/install)
 
 <!-- Installation -->
 ### Installation
@@ -85,7 +82,7 @@ Project Link: [Neumorphic Spotify](https://github.com/anrbyrm/neumorphicspotify)
 <!-- Used dependencies in project -->
 ## Used dependencies in the project
 * [flutter_neumorphic](https://pub.dev/packages/flutter_neumorphic)
-* [Ifont_awesome_flutter](https://pub.dev/packages/font_awesome_flutter)
+* [font_awesome_flutter](https://pub.dev/packages/font_awesome_flutter)
 * [lint](https://pub.dev/packages/lint)
 * [flutter_svg](https://pub.dev/packages/flutter_svg)
 * [fluttertoast](https://pub.dev/packages/fluttertoast)
