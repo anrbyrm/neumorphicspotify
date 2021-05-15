@@ -6,17 +6,18 @@ import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
 class GenresListTile extends StatefulWidget {
   final int? index;
-  final Color? textColor;
-  final String? color;
   final String? title;
+  final String? color;
   final double? imageSize;
+
+  final Color? textColor;
   final ImageProvider image;
 
   GenresListTile(
     this.image, {
+    this.index,
     this.title,
     this.color,
-    this.index,
     this.imageSize,
     this.textColor,
   });
@@ -28,8 +29,6 @@ class GenresListTile extends StatefulWidget {
 class _GenresListTileState extends State<GenresListTile> {
   @override
   Widget build(BuildContext context) {
-    Color color = Theme.of(context).scaffoldBackgroundColor;
-
     return Padding(
       padding: EdgeInsets.only(
         left: widget.index! % 2 == 0 ? 15.0 : 0.0,
@@ -47,80 +46,69 @@ class _GenresListTileState extends State<GenresListTile> {
             fontSize: 13.0,
           );
         },
-        child: Container(
-          decoration: BoxDecoration(
-            color: color,
-            borderRadius: BorderRadius.all(
-              Radius.circular(7.0),
-            ),
-            boxShadow: [
-              BoxShadow(
-                color: Color(0xFF0d1012),
-                offset: Offset(5, 5),
-                blurRadius: 14,
-              ),
-              BoxShadow(
-                color: Color(0xFF353e44).withOpacity(.8),
-                offset: Offset(-5, -5),
-                blurRadius: 14,
-              ),
-            ],
+        child: Neumorphic(
+          style: NeumorphicStyle(
+            depth: 8,
+            intensity: .7,
+            surfaceIntensity: .1,
+            shadowLightColor: Colors.white.withOpacity(.35),
+            shadowDarkColorEmboss: Colors.black,
+            shadowDarkColor: Colors.black,
+            shape: NeumorphicShape.flat,
+            color: Theme.of(context).scaffoldBackgroundColor,
           ),
-          child: Padding(
-            padding: const EdgeInsets.all(4.0),
-            child: ClipRRect(
-              borderRadius: BorderRadius.all(Radius.circular(7.0)),
-              child: Container(
-                decoration: BoxDecoration(
-                  color: ColorMix.mix(HexColor.fromHex(widget.color!))!,
-                ),
-                child: Stack(
-                  children: <Widget>[
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10, top: 10),
-                      child: Text(
-                        widget.title!,
-                        style: TextStyle(
-                          fontSize: 15.0,
-                          color: widget.textColor,
-                          fontWeight: FontWeight.bold,
-                        ),
+          child: ClipRRect(
+            borderRadius: BorderRadius.all(Radius.circular(7.0)),
+            child: Container(
+              decoration: BoxDecoration(
+                color: ColorMix.mix(HexColor.fromHex(widget.color!))!,
+              ),
+              child: Stack(
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.only(left: 10, top: 10),
+                    child: Text(
+                      widget.title!,
+                      style: TextStyle(
+                        fontSize: 15.0,
+                        color: widget.textColor,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
-                    Positioned(
-                      bottom: 0,
-                      right: -11,
-                      child: Transform.rotate(
-                        angle: pi / 9,
-                        child: Neumorphic(
-                          style: NeumorphicStyle(
-                            lightSource: LightSource.bottomRight,
-                            border: NeumorphicBorder.none(),
-                            depth: 5,
-                            intensity: .5,
-                            shadowDarkColor: Colors.black,
-                            shadowLightColor: Colors.white.withOpacity(.5),
-                            shape: NeumorphicShape.flat,
-                            boxShape: NeumorphicBoxShape.roundRect(
-                                BorderRadius.circular(2.0)),
-                            color: ColorMix.mix(
-                              HexColor.fromHex(widget.color!),
-                            ),
+                  ),
+                  Positioned(
+                    bottom: 0,
+                    right: -11,
+                    child: Transform.rotate(
+                      angle: pi / 9,
+                      child: Neumorphic(
+                        style: NeumorphicStyle(
+                          lightSource: LightSource.bottomRight,
+                          border: NeumorphicBorder.none(),
+                          depth: 7,
+                          intensity: .6,
+                          shadowDarkColor: Colors.black.withOpacity(.8),
+                          shadowLightColor: Colors.white.withOpacity(.4),
+                          shape: NeumorphicShape.flat,
+                          boxShape: NeumorphicBoxShape.roundRect(
+                              BorderRadius.circular(2.0)),
+                          color: ColorMix.mix(
+                            HexColor.fromHex(widget.color!),
                           ),
-                          child: Container(
-                            clipBehavior: Clip.antiAliasWithSaveLayer,
-                            height: widget.imageSize,
-                            width: widget.imageSize,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(2.0),
-                              image: DecorationImage(image: widget.image),
-                            ),
+                        ),
+                        child: Container(
+                          clipBehavior: Clip.antiAliasWithSaveLayer,
+                          height: widget.imageSize,
+                          width: widget.imageSize,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(2.0),
+                            image: DecorationImage(image: widget.image),
                           ),
                         ),
                       ),
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
           ),

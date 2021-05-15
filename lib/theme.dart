@@ -16,8 +16,8 @@ class AppTheme {
         fontWeight: FontWeight.bold,
       ),
       headline2: TextStyle(
-        fontSize: 22,
-        color: Colors.white.withOpacity(.8),
+        fontSize: 21,
+        color: Colors.white,
         fontWeight: FontWeight.bold,
       ),
       headline3: TextStyle(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import 'screens.dart';
 
@@ -12,34 +12,32 @@ class NavigationScreen extends StatefulWidget {
 class _NavigationScreenState extends State<NavigationScreen> {
   var navIndex = 0;
 
-  final pages = List<Widget>.unmodifiable([
+  final _pages = List<Widget>.unmodifiable([
     HomeScreen(),
     SearchScreen(),
     LibraryScreen(),
   ]);
 
-  final iconList = List<IconData>.unmodifiable([
-    Icons.home_outlined,
-    Icons.search_outlined,
-    Icons.album_outlined,
+  final _iconList = List<String>.unmodifiable([
+    'assets/icons/home_outline.svg',
+    'assets/icons/search_outline.svg',
+    'assets/icons/albums_outline.svg',
   ]);
 
-  final activeIconList = List<IconData>.unmodifiable([
-    Icons.home,
-    Icons.search,
-    Icons.album,
+  final _activeIconList = List<String>.unmodifiable([
+    'assets/icons/home_filled.svg',
+    'assets/icons/search_filled.svg',
+    'assets/icons/albums_filled.svg',
   ]);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: pages[navIndex],
+      body: _pages[navIndex],
       bottomNavigationBar: CustomNavigationBar(
-        iconList: iconList,
-        activeIconList: activeIconList,
-        onPressed: (i) => setState(
-          () => navIndex = i,
-        ),
+        iconList: _iconList,
+        activeIconList: _activeIconList,
+        onPressed: (i) => setState(() => navIndex = i),
         activeIndex: navIndex,
       ),
     );
@@ -47,13 +45,22 @@ class _NavigationScreenState extends State<NavigationScreen> {
 }
 
 class CustomNavigationBar extends StatefulWidget {
-  const CustomNavigationBar(
-      {this.iconList, this.activeIconList, this.onPressed, this.activeIndex})
-      : assert(iconList != null, activeIconList != null);
-  final List<IconData>? iconList;
-  final List<IconData>? activeIconList;
-  final Function(int)? onPressed;
+  const CustomNavigationBar({
+    this.iconList,
+    this.activeIconList,
+    this.onPressed,
+    this.activeIndex,
+  }) : assert(
+          iconList != null,
+          activeIconList != null,
+        );
+
   final activeIndex;
+
+  final List<String>? iconList;
+  final List<String>? activeIconList;
+
+  final Function(int)? onPressed;
 
   @override
   State<StatefulWidget> createState() => _CustomNavigationBarState();
@@ -65,82 +72,26 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
     return Neumorphic(
       style: NeumorphicStyle(
         depth: 0,
-        surfaceIntensity: .2,
+        surfaceIntensity: .35,
         lightSource: LightSource.bottom,
         boxShape: NeumorphicBoxShape.rect(),
         shape: NeumorphicShape.concave,
         color: Theme.of(context).scaffoldBackgroundColor,
       ),
       child: Container(
-        height: 75,
+        height: 70,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             for (var i = 0; i < widget.iconList!.length; i++)
-              widget.activeIndex == i
-                  ? CustomNavigationButtonPressed(
-                      color: Color(0xFF1DB854).withGreen(500),
-                      activeIcon: widget.activeIconList![i],
-                    )
-                  : CustomNavigationButton(
-                      icon: widget.iconList![i],
-                      color: Colors.white.withOpacity(.8),
-                      onPressed: () => widget.onPressed!(i),
-                    ),
+              CustomNavigationButton(
+                index: i,
+                icon: widget.iconList![i],
+                activeIndex: widget.activeIndex,
+                onPressed: () => widget.onPressed!(i),
+                activeIcon: widget.activeIconList![i],
+              ),
           ],
-        ),
-      ),
-    );
-  }
-}
-
-class CustomNavigationButtonPressed extends StatelessWidget {
-  final color;
-  final activeIcon;
-
-  CustomNavigationButtonPressed({this.activeIcon, this.color});
-
-  @override
-  Widget build(BuildContext context) {
-    return AnimatedContainer(
-      duration: Duration(milliseconds: 300),
-      child: Neumorphic(
-        style: NeumorphicStyle(
-          shadowDarkColor: Colors.black,
-          shadowLightColor: Colors.white,
-          depth: 2,
-          intensity: .3,
-          boxShape: NeumorphicBoxShape.circle(),
-          shape: NeumorphicShape.concave,
-          color: Colors.black,
-        ),
-        child: Container(
-          height: 45,
-          width: 45,
-          decoration: BoxDecoration(
-            color: Theme.of(context).scaffoldBackgroundColor,
-            shape: BoxShape.circle,
-          ),
-          child: Padding(
-            padding: const EdgeInsets.all(2.0),
-            child: Neumorphic(
-              style: NeumorphicStyle(
-                shadowDarkColor: Colors.black,
-                shadowLightColor: Colors.white,
-                depth: 1,
-                intensity: .2,
-                surfaceIntensity: .3,
-                boxShape: NeumorphicBoxShape.circle(),
-                shape: NeumorphicShape.concave,
-                color: Theme.of(context).scaffoldBackgroundColor,
-              ),
-              child: Icon(
-                activeIcon,
-                color: color,
-                size: 18,
-              ),
-            ),
-          ),
         ),
       ),
     );
@@ -149,10 +100,20 @@ class CustomNavigationButtonPressed extends StatelessWidget {
 
 class CustomNavigationButton extends StatelessWidget {
   final icon;
-  final color;
+  final index;
+
   final onPressed;
 
-  const CustomNavigationButton({this.icon, this.color, this.onPressed});
+  final activeIcon;
+  final activeIndex;
+
+  const CustomNavigationButton({
+    this.icon,
+    this.activeIndex,
+    this.index,
+    this.onPressed,
+    this.activeIcon,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -161,11 +122,12 @@ class CustomNavigationButton extends StatelessWidget {
       child: Neumorphic(
         style: NeumorphicStyle(
           shadowDarkColor: Colors.black,
-          shadowLightColor: Colors.white,
-          depth: 2,
-          intensity: .4,
+          shadowLightColor: Colors.white.withOpacity(.2),
+          depth: isActive() ? -5 : 5,
+          intensity: isActive() ? .5 : .6,
+          surfaceIntensity: .2,
           boxShape: NeumorphicBoxShape.circle(),
-          shape: NeumorphicShape.flat,
+          shape: NeumorphicShape.convex,
           color: Theme.of(context).scaffoldBackgroundColor,
         ),
         child: Container(
@@ -176,23 +138,21 @@ class CustomNavigationButton extends StatelessWidget {
             shape: BoxShape.circle,
           ),
           child: Padding(
-            padding: const EdgeInsets.all(2.0),
-            child: Neumorphic(
-              style: NeumorphicStyle(
-                shadowDarkColor: Colors.black,
-                shadowLightColor: Colors.white,
-                depth: 1,
-                intensity: .2,
-                surfaceIntensity: .3,
-                boxShape: NeumorphicBoxShape.circle(),
-                shape: NeumorphicShape.convex,
-                color: Theme.of(context).scaffoldBackgroundColor,
-              ),
-              child: Icon(icon, color: color, size: 18),
+            padding: const EdgeInsets.all(14.0),
+            child: SvgPicture.asset(
+              isActive() ? activeIcon : icon,
+              color: isActive()
+                  ? Color(0xFF1DB854).withGreen(200).withOpacity(.7)
+                  : Colors.white,
+              fit: BoxFit.cover,
             ),
           ),
         ),
       ),
     );
+  }
+
+  bool isActive() {
+    return index == activeIndex ? true : false;
   }
 }

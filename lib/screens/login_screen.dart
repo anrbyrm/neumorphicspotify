@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:spotify_neumorphic/theme.dart';
@@ -12,7 +13,7 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size.height / 30;
+    final leftPadding = MediaQuery.of(context).size.height / 30;
 
     if (MediaQuery.of(context).orientation == Orientation.portrait) {
       return Scaffold(
@@ -21,18 +22,27 @@ class _LoginScreenState extends State<LoginScreen> {
             Expanded(
               flex: 1,
               child: Padding(
-                padding: EdgeInsets.only(left: size, top: 20),
+                padding: EdgeInsets.only(left: leftPadding),
                 child: Row(
                   children: [
                     Container(
                       height: 100,
-                      child: Icon(
-                        FontAwesomeIcons.spotify,
-                        size: 60,
-                        color: Colors.white,
+                      child: Center(
+                        child: NeumorphicIcon(
+                          FontAwesomeIcons.spotify,
+                          size: 60,
+                          style: NeumorphicStyle(
+                            shape: NeumorphicShape.flat,
+                            depth: 7,
+                            intensity: .7,
+                            shadowLightColor: Colors.white.withOpacity(.4),
+                            shadowDarkColor: Colors.black,
+                            color: Colors.white,
+                          ),
+                        ),
                       ),
                     ),
-                    SizedBox(width: 5),
+                    SizedBox(width: 10),
                     Text(
                       'Spotify',
                       style: TextStyle(
@@ -56,7 +66,7 @@ class _LoginScreenState extends State<LoginScreen> {
             Expanded(
               flex: 3,
               child: Padding(
-                padding: EdgeInsets.only(left: size),
+                padding: EdgeInsets.only(left: leftPadding),
                 child: Container(
                   width: double.infinity,
                   child: Column(
@@ -121,7 +131,7 @@ class _LoginScreenState extends State<LoginScreen> {
             Expanded(
               flex: 1,
               child: Padding(
-                padding: EdgeInsets.only(left: size, top: 20),
+                padding: EdgeInsets.only(left: leftPadding, top: 20.0),
                 child: Row(
                   children: [
                     Container(
@@ -161,7 +171,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     Padding(
-                      padding: EdgeInsets.only(left: size),
+                      padding: EdgeInsets.only(left: leftPadding),
                       child: Container(
                         width: double.infinity,
                         child: Column(

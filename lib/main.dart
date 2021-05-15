@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
+import 'package:spotify_neumorphic/theme.dart';
 import 'package:spotify_neumorphic/route_generator.dart';
 import 'package:spotify_neumorphic/screens/screens.dart';
-import 'package:spotify_neumorphic/theme.dart';
 
 void main() {
   runApp(SpotifyRedesign());
@@ -11,6 +12,10 @@ void main() {
 class SpotifyRedesign extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       initialRoute: '/login',

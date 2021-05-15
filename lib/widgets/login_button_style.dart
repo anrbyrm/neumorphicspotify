@@ -16,6 +16,26 @@ class LoginButton extends StatefulWidget {
 }
 
 class _LoginButtonState extends State<LoginButton> {
+  double depth = 7.0, intensity = .6;
+
+  void _onPointerUp(PointerEvent event) {
+    setState(() {
+      depth = 7.0;
+      intensity = .6;
+    });
+    Future.delayed(
+      Duration(milliseconds: 200),
+      () => Navigator.of(context).pushReplacementNamed('/navigation'),
+    );
+  }
+
+  void _onPointerDown(PointerEvent event) {
+    setState(() {
+      depth = -6.0;
+      intensity = .7;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     double buttonWidth;
@@ -26,49 +46,36 @@ class _LoginButtonState extends State<LoginButton> {
     }
     return Align(
       alignment: Alignment.center,
-      child: Container(
-        width: buttonWidth,
-        height: 55,
-        child: Neumorphic(
-          style: NeumorphicStyle(
-            shape: NeumorphicShape.flat,
-            color: widget.color!.withOpacity(.95),
-            depth: 5,
-            intensity: .3,
-            shadowLightColorEmboss: Colors.white,
-            shadowDarkColorEmboss: Colors.black,
-            boxShape: NeumorphicBoxShape.roundRect(
-                BorderRadius.all(Radius.circular(50))),
-            lightSource: LightSource.topLeft,
-          ),
-          child: Padding(
-            padding: const EdgeInsets.all(5),
-            child: NeumorphicButton(
-              duration: const Duration(milliseconds: 100),
-              curve: Curves.linear,
-              onPressed: (() {
-                Navigator.of(context).pushNamed('/navigation');
-              }),
-              style: NeumorphicStyle(
-                shape: NeumorphicShape.convex,
-                color: widget.color,
-                depth: 1,
-                intensity: .1,
-                surfaceIntensity: .2,
-                boxShape: NeumorphicBoxShape.roundRect(
-                    BorderRadius.all(Radius.circular(50))),
-                lightSource: LightSource.top,
-              ),
-              child: Center(
-                child: Text(
-                  widget.buttonText!.toUpperCase(),
-                  style: TextStyle(
-                    color: widget.color == Color(0xFFF5F5F5)
-                        ? Colors.black
-                        : Colors.white,
-                    fontSize: 12,
-                    fontWeight: FontWeight.bold,
-                  ),
+      child: Listener(
+        onPointerUp: _onPointerUp,
+        onPointerDown: _onPointerDown,
+        child: Container(
+          width: buttonWidth,
+          height: 55,
+          child: Neumorphic(
+            style: NeumorphicStyle(
+              shape: NeumorphicShape.concave,
+              color: widget.color!,
+              depth: depth,
+              intensity: intensity,
+              surfaceIntensity: .3,
+              shadowDarkColor: Colors.black,
+              shadowLightColor: Colors.white.withOpacity(.4),
+              shadowDarkColorEmboss: Colors.black.withOpacity(.8),
+              shadowLightColorEmboss: Colors.white.withOpacity(.3),
+              boxShape: NeumorphicBoxShape.roundRect(
+                  BorderRadius.all(Radius.circular(50))),
+              lightSource: LightSource.topLeft,
+            ),
+            child: Center(
+              child: Text(
+                widget.buttonText!.toUpperCase(),
+                style: TextStyle(
+                  color: widget.color == Color(0xFFF5F5F5)
+                      ? Colors.black
+                      : Colors.white,
+                  fontSize: 12.0,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
             ),

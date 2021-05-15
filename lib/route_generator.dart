@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:spotify_neumorphic/screens/screens.dart';
@@ -6,11 +7,13 @@ class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case '/navigation':
-        return MaterialPageRoute(builder: (_) => NavigationScreen());
+        return CupertinoPageRoute(builder: (_) => NavigationScreen());
       case '/login':
-        return MaterialPageRoute(builder: (_) => LoginScreen());
+        return CupertinoPageRoute(builder: (_) => LoginScreen());
       case '/home':
-        return MaterialPageRoute(builder: (_) => HomeScreen());
+        return CupertinoPageRoute(builder: (_) => HomeScreen());
+      case '/profile':
+        return CupertinoPageRoute(builder: (_) => ProfileScreen());
       default:
         return _errorRoute();
     }

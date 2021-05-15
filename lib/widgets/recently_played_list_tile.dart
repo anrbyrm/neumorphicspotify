@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
+
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
 class RecentlyPlayedListTile extends StatelessWidget {
+  final int? last;
+  final int? index;
+
   final String? name;
   final String? artist;
   final String? imagePath;
-  final int? index;
-  final int? last;
 
   const RecentlyPlayedListTile({
     @required this.name,
@@ -30,32 +32,19 @@ class RecentlyPlayedListTile extends StatelessWidget {
             child: Neumorphic(
               style: NeumorphicStyle(
                 color: Theme.of(context).scaffoldBackgroundColor,
-                shape: NeumorphicShape.concave,
+                shape: NeumorphicShape.flat,
                 boxShape: NeumorphicBoxShape.circle(),
                 depth: 7,
                 surfaceIntensity: .1,
-                intensity: .4,
+                intensity: .6,
                 shadowDarkColor: Colors.black,
-                shadowLightColor: Colors.white,
+                shadowLightColor: Colors.white.withOpacity(.5),
                 lightSource: LightSource.topLeft,
               ),
-              child: Padding(
-                padding: const EdgeInsets.all(6.0),
-                child: Neumorphic(
-                  style: NeumorphicStyle(
-                    color: Theme.of(context).scaffoldBackgroundColor,
-                    shape: NeumorphicShape.concave,
-                    boxShape: NeumorphicBoxShape.circle(),
-                    depth: 6,
-                    intensity: .1,
-                    lightSource: LightSource.top,
-                  ),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      image: DecorationImage(image: AssetImage(imagePath!)),
-                    ),
-                  ),
+              child: Container(
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  image: DecorationImage(image: AssetImage(imagePath!)),
                 ),
               ),
             ),
