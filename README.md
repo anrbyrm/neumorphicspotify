@@ -7,7 +7,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/anrbyrm/neumorphicspotify">
-    <img src="images/spotify_white_icon.png" alt="Logo" width="80" height="80">
+    <img src="assets/images/spotify_white_icon.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Spotify Neumorphic Redesign</h3>
@@ -31,10 +31,18 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Splash Screen][splash]]
-[![Main Screen][menu_1]]
-[![Search Screen][menu_2]]
-[![Library Screen][menu_3]]
+<a href="https://github.com/anrbyrm/neumorphicspotify/blob/assets/images/splash.jpg">
+    <img src="assets/images/splash.jpg" alt="Logo" width="80" height="160">
+</a>
+<a href="https://github.com/anrbyrm/neumorphicspotify/blob/assets/images/menu_1.jpg">
+    <img src="assets/images/menu_1.jpg" alt="Logo" width="80" height="160">
+</a>
+<a href="https://github.com/anrbyrm/neumorphicspotify/blob/assets/images/menu_2.jpg">
+    <img src="assets/images/menu_2.jpg" alt="Logo" width="80" height="160">
+</a>
+<a href="https://github.com/anrbyrm/neumorphicspotify/blob/assets/images/menu_3.jpg">
+    <img src="assets/images/menu_3.jpg" alt="Logo" width="80" height="160">
+</a>
 
 This project created for learning purpose. As I finished some screens according Neumorphic design I wanted to share this project in Github.
 
@@ -89,7 +97,3 @@ Project Link: [Neumorphic Spotify](https://github.com/anrbyrm/neumorphicspotify)
 [stars-url]: https://github.com/anrbyrm/neumorphicspotify/stargazers
 [license-shield]: https://img.shields.io/github/license/anrbyrm/neumorphicspotify?style=flat-square
 [license-url]: https://github.com/anrbyrm/neumorphicspotify/blob/main/LICENSE
-[splash_screen]: assets/images/splash.jpg
-[menu_1]: assets/images/menu_1.jpg
-[menu_2]: assets/images/menu_2.jpg
-[menu_3]: assets/images/menu_3.jpg
