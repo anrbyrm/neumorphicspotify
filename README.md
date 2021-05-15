@@ -42,6 +42,8 @@
     <img src="assets/images/menu_3.jpg" alt="Library Screen" width="200">
 </a>
 
+First this design inspired from Behance project created by [Sangeeta Baishya](https://www.behance.net/SangeetaBaishya).
+
 This project created for learning purpose. As I finished some screens according Neumorphic design I wanted to share this project in Github.
 
 U can navigate in README using table of contents.
