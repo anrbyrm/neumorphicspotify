@@ -7,7 +7,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/anrbyrm/neumorphicspotify">
-    <img src="assets/images/spotify_white_logo.png" alt="Spotify Logo" width="1700">
+    <img src="assets/images/spotify_white_logo.png" alt="Spotify Logo" width="1600">
   </a>
 
   <h3 align="center">Spotify Neumorphic Redesign</h3>
@@ -29,16 +29,16 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<a href="https://github.com/anrbyrm/neumorphicspotify/blob/assets/images/splash.jpg">
-    <img src="assets/images/splash.jpg" alt="Splash Screen" width="200">
+<a href="https://raw.githubusercontent.com/anrbyrm/neumorphicspotify/main/assets/images/login.jpg">
+    <img src="assets/images/splash.jpg" alt="Login Screen" width="200">
 </a>
-<a href="https://github.com/anrbyrm/neumorphicspotify/blob/assets/images/menu_1.jpg">
+<a href="https://raw.githubusercontent.com/anrbyrm/neumorphicspotify/main/assets/images/menu_1.jpg">
     <img src="assets/images/menu_1.jpg" alt="Main Screen" width="200">
 </a>
-<a href="https://github.com/anrbyrm/neumorphicspotify/blob/assets/images/menu_2.jpg">
+<a href="https://raw.githubusercontent.com/anrbyrm/neumorphicspotify/main/assets/images/menu_2.jpg">
     <img src="assets/images/menu_2.jpg" alt="Search Screen" width="200">
 </a>
-<a href="https://github.com/anrbyrm/neumorphicspotify/blob/assets/images/menu_3.jpg">
+<a href="https://raw.githubusercontent.com/anrbyrm/neumorphicspotify/main/assets/images/menu_3.jpg">
     <img src="assets/images/menu_3.jpg" alt="Library Screen" width="200">
 </a>
 
@@ -74,7 +74,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-[Facebook](https://www.facebook.com/anrbyrm)
+[Facebook](https://www.facebook.com/anrbyrm)<br />
 [Instagram](https://www.instagram.com/anrbyrm)
 
 Project Link: [Neumorphic Spotify](https://github.com/anrbyrm/neumorphicspotify)
